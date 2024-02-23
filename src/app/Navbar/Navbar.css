@@ -1,0 +1,66 @@
+.main_nav {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    padding: 15px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main_nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main_nav li {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.main_nav button {
+    background-color: #24AB70;
+    border: none;
+    color: white;
+    font-weight: 400;
+    border-radius: 35px;
+    padding: 14px 25px;
+    cursor: pointer;
+}
+
+
+/* main hero section */
+
+
+.container {
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 45px;
+    background: #edfffb;
+}
+
+.sub_video {
+    display: flex;
+    align-items: center;
+}
+
+.sub_video p {
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:950px) {
+    .main_nav {
+        padding: 15px;
+    }
+
+    .main_nav ul {
+        display: none;
+    }
+
+    .main_nav button {
+        padding: 8px 15px;
+    }
+}
