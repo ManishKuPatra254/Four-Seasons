@@ -31,6 +31,7 @@ function Signup() {
             const response = await SignupUser(formData);
             console.log(response);
             showAlert(response.msg, 'success');
+            setFormData('');
         } catch (error) {
             showAlert(error.msg, 'error');
         }
