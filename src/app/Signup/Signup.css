@@ -1,0 +1,18 @@
+.main_signup_form {
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.main_signup_form h2 {
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+
+@media screen and (max-width :900px) {
+    .main_signup_form {
+        width: 90%;
+        margin: auto;
+    }
+}
