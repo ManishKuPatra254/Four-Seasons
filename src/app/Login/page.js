@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import './page.css'
+import Link from 'next/link'
 import { Navbar } from '../Navbar/Navbar'
 
 function Login() {
@@ -7,6 +8,7 @@ function Login() {
         <Fragment>
             <Navbar />
             <form style={{ width: "40%", margin: "auto", marginTop: "80px" }}>
+                <h2>Login to your account</h2>
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -17,7 +19,7 @@ function Login() {
                     <input type="password" className="form-control" id="exampleInputPassword1" />
                 </div>
                 <button type="submit" style={{ width: "100%", background: "#24AB70", border: "none", borderRadius: "8px", padding: "9px", color: "white", marginTop: "15px" }} >Login now</button>
-                <p style={{ display: "flex", justifyContent: "center", marginTop: "25px" }}>Dont have a account <a href="">Sign up</a></p>
+                <p style={{ display: "flex", justifyContent: "center", marginTop: "25px" }}>Dont have a account <Link href={'/Signup'}>Signup</Link></p>
             </form>
         </Fragment>
     )
