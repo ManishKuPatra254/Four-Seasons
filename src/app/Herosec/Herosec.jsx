@@ -7,17 +7,17 @@ import herobuttonplay from '../assets/play.svg'
 export function Herosec() {
     return (
         <Fragment>
-            <div className="container">
-                <div className="row">
-                    <div className="col p-4">
+            <div className="main_hero_sec">
+                <div className="sub_hero_sec">
+                    <div className="main_hero_content">
                         <h1>Find your perfect place to stay</h1>
                         <p>Discover Your Oasis: Unforgettable Stays Await at FourSeasons</p>
                         <div className="sub_video">
                             <Image src={herobuttonplay} alt='' />
-                            <p>Watch video</p>
+                            <span>Watch video</span>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="sub_hero_image">
                         <Image src={herosec} alt='' className="w-100" />
                     </div>
                 </div>
