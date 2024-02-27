@@ -8,10 +8,10 @@ import { SignupUser } from '../Service/auth.service'
 import Alert from '@mui/material/Alert';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-
+import { useRouter } from 'next/navigation';
 
 function Signup() {
-
+    const router = useRouter();
     const [formData, setFormData] = useState({
         first_name: "",
         last_name: "",
@@ -30,8 +30,13 @@ function Signup() {
         try {
             const response = await SignupUser(formData);
             console.log(response);
-            showAlert(response.msg, 'success');
-            setFormData('');
+            if (response.status === 200) {
+                showAlert(response.msg, 'success');
+                router.push('/Login');
+            }
+            else {
+                showAlert(response.msg, 'error');
+            }
         } catch (error) {
             showAlert(error.msg, 'error');
         }
