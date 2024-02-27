@@ -46,9 +46,9 @@ function Login() {
         try {
             const response = await LoginUser(formData);
             if (response.status === 200) {
-                showAlert(response.msg, 'success');
                 console.log(response)
                 router.push('/');
+                showAlert(response.msg, 'success');
             }
             else {
                 showAlert(response.msg, 'error');
