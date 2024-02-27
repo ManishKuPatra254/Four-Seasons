@@ -31,8 +31,8 @@ function Signup() {
             const response = await SignupUser(formData);
             console.log(response);
             if (response.status === 200) {
-                showAlert(response.msg, 'success');
                 router.push('/Login');
+                showAlert(response.msg, 'success');
             }
             else {
                 showAlert(response.msg, 'error');
