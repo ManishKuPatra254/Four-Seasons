@@ -30,8 +30,13 @@ function Signup() {
         try {
             const response = await SignupUser(formData);
             console.log(response);
-            showAlert(response.msg, 'success');
-            setFormData('');
+            if (response.status === 200) {
+                showAlert(response.msg, 'success');
+                // setFormData('');
+            }
+            else {
+                showAlert(response.msg, 'error');
+            }
         } catch (error) {
             showAlert(error.msg, 'error');
         }
