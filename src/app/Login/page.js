@@ -1,13 +1,15 @@
-"use client"
+"use client";
+
 import React, { Fragment, useState } from 'react'
 import './Login.css'
 import Link from 'next/link'
 import { Navbar } from '../Navbar/Navbar'
 import Alert from '@mui/material/Alert';
 import { LoginUser } from '../Service/auth.service'
+import { useRouter } from 'next/navigation';
 
 function Login() {
-
+    const router = useRouter();
     const [alertMessage, setAlertMessage] = useState('');
     const [alertSeverity, setAlertSeverity] = useState('');
     const [formData, setFormData] = useState({
@@ -46,6 +48,7 @@ function Login() {
             if (response.status === 200) {
                 showAlert(response.msg, 'success');
                 console.log(response)
+                router.push('/');
             }
             else {
                 showAlert(response.msg, 'error');
