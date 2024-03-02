@@ -3,7 +3,7 @@
 import React, { Fragment, useState } from 'react'
 import './Login.css'
 import Link from 'next/link'
-import { Navbar } from '../Navbar/Navbar'
+import Navbar from '../Navbar/Navbar'
 import Alert from '@mui/material/Alert';
 import { LoginUser } from '../Service/auth.service'
 import { useRouter } from 'next/navigation';
@@ -12,6 +12,7 @@ function Login() {
     const router = useRouter();
     const [alertMessage, setAlertMessage] = useState('');
     const [alertSeverity, setAlertSeverity] = useState('');
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -46,6 +47,8 @@ function Login() {
         try {
             const response = await LoginUser(formData);
             if (response.status === 200) {
+                // localStorage.setItem('isLoggedIn', 'true');
+                // setIsLoggedIn(true); // Set login status to true
                 console.log(response)
                 router.push('/');
                 showAlert(response.msg, 'success');
@@ -61,7 +64,10 @@ function Login() {
 
     return (
         <Fragment>
-            <Navbar />
+            <Navbar
+
+            // isLoggedIn={isLoggedIn}
+            />
             <div className="main_login_form">
                 <form>
                     {alertMessage && (

@@ -1,5 +1,6 @@
+
 import styles from './page.module.css'
-import { Navbar } from './Navbar/Navbar'
+import Navbar from './Navbar/Navbar'
 import { Herosec } from './Herosec/Herosec'
 
 export default function Home() {
