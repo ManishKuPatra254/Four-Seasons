@@ -1,25 +1,54 @@
 "use client";
 
-import React, { Fragment, useState } from 'react'
-import { Navbar } from '../Navbar/Navbar'
+import React, { Fragment, useState, useEffect } from 'react'
+import Navbar from '../Navbar/Navbar'
 import './Signup.css'
 import Link from 'next/link'
-import { SignupUser } from '../Service/auth.service'
+import { SignupUser, getByIdUser } from '../Service/auth.service'
 import Alert from '@mui/material/Alert';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 
 function Signup() {
     const router = useRouter();
+    // const { _id } = useParams();
+    // console.log(_id, "idsignupdata");
+    // const [dataGetById, setDataGetById] = useState(null);
     const [formData, setFormData] = useState({
         first_name: "",
         last_name: "",
         email: "",
         password: "",
     })
+    // const [signedUp, setSignedUp] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
     const [alertSeverity, setAlertSeverity] = useState('');
+
+    // getbyID  .............................. 
+
+    // useEffect(() => {
+    //     const fetchuserId = async () => {
+    //         try {
+    //             const response = await getByIdUser(_id);
+    //             console.log(response, "responsefetch");
+    //             setDataGetById(response.data);
+    //         } catch (error) {
+    //             console.error('Error fetching admin data:', error);
+    //         }
+    //     };
+
+    //     fetchuserId();
+    // }, [_id]);
+
+
+    // const handleEditChange = (e) => {
+    //     setDataGetById({
+    //         ...dataGetById,
+    //         [e.target.name]: e.target.value
+    //     });
+    // };
+
 
     const handleSignupUser = async (e) => {
         e.preventDefault();
@@ -31,6 +60,7 @@ function Signup() {
             const response = await SignupUser(formData);
             console.log(response);
             if (response.status === 200) {
+                // setSignedUp(true);
                 router.push('/Login');
                 showAlert(response.msg, 'success');
             }
