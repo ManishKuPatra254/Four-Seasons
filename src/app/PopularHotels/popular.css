@@ -1,0 +1,109 @@
+.sub_popular_hotels {
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 85px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub_popular_hotels h3 {
+    font-size: 40px;
+}
+
+.sub_popular_hotels button {
+    color: #24AB70;
+    background-color: #d8ffee;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 30px;
+}
+
+.cards_hotels_main {
+    display: flex;
+    margin: auto;
+    margin-top: 85px;
+    gap: 20px;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.cards_hotels {
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 5px 10px;
+}
+
+.cards_hotels span {
+    color: #24AB70;
+}
+
+.cards_hotels h4 {
+    margin-top: 12px;
+}
+
+.main_hotels_discovery {
+    background-color: #F4FBF8;
+    border-radius: 15px;
+    width: 90%;
+    margin: auto;
+    gap: 35px;
+    margin-top: 85px;
+    display: flex;
+    align-items: center;
+}
+
+.main_hotels_discovery>div button {
+    color: #ffffff;
+    background-color: #24AB70;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 30px;
+}
+
+.main_facilities {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 100px;
+    /* border: 1px solid red; */
+}
+
+.main_facilities>div {
+    width: 40%;
+}
+
+.main_facilities>div p {
+    margin-top: 20px;
+}
+
+.main_facilities div>button {
+    color: #ffffff;
+    background-color: #24AB70;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 30px;
+}
+
+.main_sub_facilities {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid rgb(158, 81, 81); */
+}
+
+.sub_new_facilities {
+    /* border: 1px solid yellow; */
+    text-align: center;
+}
+
+.sub_new_facilities p {
+    margin-top: 12px;
+}
+
+@media screen and (max-width:900px) {
+    .cards_hotels_main {
+        flex-direction: column;
+    }
+}

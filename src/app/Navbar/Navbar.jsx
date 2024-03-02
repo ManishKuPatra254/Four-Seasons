@@ -18,6 +18,7 @@ const Navbar = () => {
     return (
         <Fragment>
             <div className="main_nav">
+                {/* <h2>FourSeasons</h2> */}
                 <h2>FourSeasons</h2>
                 <ul>
                     <li>Booking</li>
